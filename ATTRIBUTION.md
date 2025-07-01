@@ -2,7 +2,7 @@
 ## Collaborators
 
 ### Role
-Person 1  
+Zachariah Jackson - Developer
 Person 2  
 [Person w/ Link]()  
 
