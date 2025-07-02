@@ -1,7 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cymyjayrgcfyy"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_game_template/extras/scenes/overlaid_menus/level_lost_menu.tscn" id="1_4eh44"]
-[ext_resource type="Script" path="res://UI stuff/scenes/overlaid_menus/level_lost_menu.gd" id="2_54emp"]
+[ext_resource type="PackedScene" uid="uid://dkq3nhkmhu4je" path="res://addons/maaacks_game_template/extras/scenes/overlaid_menus/level_lost_menu.tscn" id="1_4eh44"]
+[ext_resource type="Script" uid="uid://m7wjltkm3j1" path="res://UI stuff/scenes/overlaid_menus/level_lost_menu.gd" id="2_54emp"]
 
 [node name="LevelLostMenu" instance=ExtResource("1_4eh44")]
 script = ExtResource("2_54emp")
+
+[node name="DescriptionLabel" parent="MenuPanelContainer/MarginContainer/BoxContainer/DescriptionMargin" index="0"]
+text = "[center]You blew up...[/center]"

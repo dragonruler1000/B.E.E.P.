@@ -30,6 +30,7 @@ script = ExtResource("4_5ws43")
 tutorial_scenes = Array[PackedScene]([ExtResource("5_iil7d")])
 
 [node name="TutorialButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 15.0
 offset_top = 609.0
 offset_right = 108.0
@@ -37,11 +38,13 @@ offset_bottom = 640.0
 text = "Tutorial"
 
 [node name="InputDisplayLabel" type="Label" parent="."]
+layout_mode = 0
 size_flags_horizontal = 3
 horizontal_alignment = 1
 script = ExtResource("3_cb25b")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 839.0
 offset_top = 617.0
 offset_right = 995.0
@@ -50,6 +53,7 @@ text = "Change Level Color: "
 
 [node name="ColorPickerButton" type="ColorPickerButton" parent="."]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 1009.0
 offset_top = 612.0
 offset_right = 1145.0
@@ -57,6 +61,7 @@ offset_bottom = 643.0
 text = "Change Color"
 
 [node name="LoseButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 794.0
 offset_top = 301.0
 offset_right = 862.0
@@ -65,6 +70,7 @@ size_flags_horizontal = 3
 text = "Lose"
 
 [node name="WinButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 544.0
 offset_top = 295.0
 offset_right = 606.0
@@ -73,12 +79,31 @@ size_flags_horizontal = 3
 text = "Win"
 
 [node name="LoseButton2" type="Button" parent="."]
+layout_mode = 0
 offset_left = 278.0
 offset_top = 299.0
 offset_right = 346.0
 offset_bottom = 330.0
 size_flags_horizontal = 3
 text = "Lose"
+
+[node name="BombTimer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_right = 1151.0
+offset_bottom = 27.0
+show_percentage = false
+
+[node name="TimeLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
 
 [connection signal="pressed" from="TutorialButton" to="." method="_on_tutorial_button_pressed"]
 [connection signal="color_changed" from="ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]
