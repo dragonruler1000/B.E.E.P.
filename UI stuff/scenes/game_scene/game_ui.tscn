@@ -30,7 +30,7 @@ bus = &"Master"
 [node name="LevelListLoader" type="Node" parent="." node_paths=PackedStringArray("level_container")]
 script = ExtResource("4_h0mq3")
 level_container = NodePath("../ViewportContainer/ConfigurableSubViewport")
-files = Array[String](["res://UI stuff/scenes/game_scene/levels/level_1.tscn", "res://UI stuff/scenes/game_scene/levels/level_2.tscn", "res://UI stuff/scenes/game_scene/levels/level_3.tscn"])
+files = Array[String](["res://UI stuff/scenes/game_scene/levels/level_1.tscn", "res://UI stuff/scenes/game_scene/levels/level_2.tscn", "res://UI stuff/scenes/game_scene/levels/level_3.tscn", "res://UI stuff/scenes/game_scene/levels/level_4.tscn"])
 directory = "res://UI stuff/scenes/game_scene/levels"
 
 [node name="LevelListManager" type="Node" parent="." node_paths=PackedStringArray("level_list_loader", "level_loading_screen")]

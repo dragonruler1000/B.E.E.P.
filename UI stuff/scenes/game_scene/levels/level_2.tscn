@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://be46mukqk5wk6"]
+[gd_scene load_steps=6 format=3 uid="uid://be46mukqk5wk6"]
 
 [ext_resource type="Script" uid="uid://q0w300oxlylb" path="res://UI stuff/scenes/game_scene/levels/level.gd" id="1_cdhnl"]
 [ext_resource type="Script" uid="uid://bd1ons4o2m55p" path="res://UI stuff/scenes/game_scene/input_display_label.gd" id="3_cb25b"]
 [ext_resource type="Script" uid="uid://mlxrwrfaeqjc" path="res://UI stuff/scenes/game_scene/tutorial_manager.gd" id="4_5ws43"]
+[ext_resource type="Texture2D" uid="uid://bbcxl0c5ru18t" path="res://assets/bombb.png" id="5_cdhnl"]
 [ext_resource type="PackedScene" uid="uid://ddqfr8f7aus5s" path="res://UI stuff/scenes/game_scene/tutorials/tutorial_2.tscn" id="5_iil7d"]
 
 [node name="Level2" type="Control"]
@@ -44,6 +45,7 @@ horizontal_alignment = 1
 script = ExtResource("3_cb25b")
 
 [node name="Label" type="Label" parent="."]
+z_index = 1
 layout_mode = 0
 offset_left = 839.0
 offset_top = 617.0
@@ -61,31 +63,34 @@ offset_bottom = 643.0
 text = "Change Color"
 
 [node name="LoseButton" type="Button" parent="."]
+z_index = 1
 layout_mode = 0
-offset_left = 794.0
-offset_top = 301.0
-offset_right = 862.0
-offset_bottom = 332.0
+offset_left = 683.0
+offset_top = 351.0
+offset_right = 751.0
+offset_bottom = 382.0
 size_flags_horizontal = 3
-text = "Lose"
+text = "Blue"
 
 [node name="WinButton" type="Button" parent="."]
+z_index = 1
 layout_mode = 0
-offset_left = 544.0
-offset_top = 295.0
-offset_right = 606.0
-offset_bottom = 326.0
+offset_left = 560.0
+offset_top = 398.0
+offset_right = 622.0
+offset_bottom = 429.0
 size_flags_horizontal = 3
-text = "Win"
+text = "Green"
 
 [node name="LoseButton2" type="Button" parent="."]
+z_index = 1
 layout_mode = 0
-offset_left = 278.0
-offset_top = 299.0
-offset_right = 346.0
-offset_bottom = 330.0
+offset_left = 357.0
+offset_top = 332.0
+offset_right = 425.0
+offset_bottom = 363.0
 size_flags_horizontal = 3
-text = "Lose"
+text = "Red"
 
 [node name="BombTimer" type="Timer" parent="."]
 wait_time = 10.0
@@ -104,6 +109,11 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
+
+[node name="Bombb" type="Sprite2D" parent="."]
+position = Vector2(569, 324.5)
+scale = Vector2(10.625, 10.0469)
+texture = ExtResource("5_cdhnl")
 
 [connection signal="pressed" from="TutorialButton" to="." method="_on_tutorial_button_pressed"]
 [connection signal="color_changed" from="ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]
