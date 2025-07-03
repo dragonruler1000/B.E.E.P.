@@ -105,6 +105,7 @@ text = "Yellow"
 wait_time = 10.0
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
 offset_right = 1151.0
 offset_bottom = 27.0
 show_percentage = false

@@ -11,9 +11,6 @@ game_scene_path = "res://UI stuff/scenes/game_scene/game_ui.tscn"
 options_packed_scene = ExtResource("3_8j5rb")
 credits_packed_scene = ExtResource("4_mupya")
 
-[node name="BackgroundMusicPlayer" parent="." index="1"]
-bus = &"Master"
-
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
 text = "B.E.E.P."
 
