@@ -25,6 +25,7 @@ pause_menu_packed = ExtResource("2_fmfxo")
 focused_viewport = NodePath("../ViewportContainer/ConfigurableSubViewport")
 
 [node name="BackgroundMusicPlayer" parent="." instance=ExtResource("3_6djml")]
+bus = &"Master"
 
 [node name="LevelListLoader" type="Node" parent="." node_paths=PackedStringArray("level_container")]
 script = ExtResource("4_h0mq3")

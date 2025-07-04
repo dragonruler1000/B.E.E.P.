@@ -8,7 +8,7 @@ var input_string := ""
 func _ready():
 	for button in get_children():
 		if button is Button:
-			button.pressed.connect(_on_button_pressed_)
+			button.pressed.connect(_on_button_pressed)
 
 func _on_button_pressed(text):
 	match text:
