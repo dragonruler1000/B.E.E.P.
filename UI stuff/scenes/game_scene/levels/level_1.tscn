@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://q0w300oxlylb" path="res://UI stuff/scenes/game_scene/levels/level.gd" id="1_pfnng"]
 [ext_resource type="Script" uid="uid://bd1ons4o2m55p" path="res://UI stuff/scenes/game_scene/input_display_label.gd" id="3_7lwuh"]
 [ext_resource type="Script" uid="uid://mlxrwrfaeqjc" path="res://UI stuff/scenes/game_scene/tutorial_manager.gd" id="4_kvhgq"]
-[ext_resource type="Texture2D" uid="uid://76416m8moaii" path="res://assets/bomb-a.png" id="5_pfnng"]
+[ext_resource type="Texture2D" uid="uid://76416m8moaii" path="res://assets/art/bomb-a.png" id="5_pfnng"]
 [ext_resource type="PackedScene" uid="uid://cuj1i0t1dle8e" path="res://UI stuff/scenes/game_scene/tutorials/tutorial_1.tscn" id="5_w6u0t"]
 
 [node name="Level1" type="Control"]

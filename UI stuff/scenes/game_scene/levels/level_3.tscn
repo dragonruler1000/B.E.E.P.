@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bd1ons4o2m55p" path="res://UI stuff/scenes/game_scene/input_display_label.gd" id="3_filbf"]
 [ext_resource type="Script" uid="uid://mlxrwrfaeqjc" path="res://UI stuff/scenes/game_scene/tutorial_manager.gd" id="4_knsum"]
 [ext_resource type="PackedScene" uid="uid://birl1quj74b6t" path="res://UI stuff/scenes/game_scene/tutorials/tutorial_3.tscn" id="5_r2vtv"]
-[ext_resource type="Texture2D" uid="uid://diok6f8e7xpdf" path="res://assets/bombc.png" id="5_t8nrh"]
+[ext_resource type="Texture2D" uid="uid://diok6f8e7xpdf" path="res://assets/art/bombc.png" id="5_t8nrh"]
 
 [node name="Level3" type="Control"]
 layout_mode = 3

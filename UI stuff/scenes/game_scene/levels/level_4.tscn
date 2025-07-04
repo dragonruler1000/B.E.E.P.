@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://hxev0kownjaf"]
+[gd_scene load_steps=6 format=3 uid="uid://hxev0kownjaf"]
 
 [ext_resource type="Script" uid="uid://q0w300oxlylb" path="res://UI stuff/scenes/game_scene/levels/level.gd" id="1_v1ap2"]
 [ext_resource type="Script" uid="uid://mlxrwrfaeqjc" path="res://UI stuff/scenes/game_scene/tutorial_manager.gd" id="2_tvl8y"]
 [ext_resource type="PackedScene" uid="uid://birl1quj74b6t" path="res://UI stuff/scenes/game_scene/tutorials/tutorial_3.tscn" id="3_nhgbc"]
 [ext_resource type="Script" uid="uid://bd1ons4o2m55p" path="res://UI stuff/scenes/game_scene/input_display_label.gd" id="4_ed08t"]
+[ext_resource type="Texture2D" uid="uid://denic0yrl08kb" path="res://assets/art/bombD.png" id="5_tvl8y"]
 
 [node name="Level4" type="Control"]
 layout_mode = 3
@@ -61,40 +62,44 @@ offset_bottom = 635.0
 text = "Change Color"
 
 [node name="WinButton" type="Button" parent="."]
+z_index = 1
 layout_mode = 0
-offset_left = 380.0
-offset_top = 164.0
-offset_right = 442.0
-offset_bottom = 195.0
+offset_left = 347.0
+offset_top = 188.0
+offset_right = 409.0
+offset_bottom = 219.0
 size_flags_horizontal = 3
-text = "Win"
+text = "Red"
 
 [node name="LoseButton" type="Button" parent="."]
+z_index = 1
 layout_mode = 0
-offset_left = 722.0
-offset_top = 161.0
-offset_right = 790.0
-offset_bottom = 192.0
+offset_left = 690.0
+offset_top = 157.0
+offset_right = 758.0
+offset_bottom = 188.0
 size_flags_horizontal = 3
-text = "Lose"
+text = "Blue"
 
 [node name="LoseButton2" type="Button" parent="."]
+z_index = 1
 layout_mode = 0
-offset_left = 369.0
-offset_top = 305.0
-offset_right = 437.0
-offset_bottom = 336.0
+offset_left = 345.0
+offset_top = 421.0
+offset_right = 413.0
+offset_bottom = 452.0
 size_flags_horizontal = 3
-text = "Lose"
+text = "Green"
 
 [node name="LoseButton3" type="Button" parent="."]
+z_index = 1
 layout_mode = 0
-offset_left = 729.0
-offset_top = 312.0
-offset_right = 797.0
-offset_bottom = 343.0
+offset_left = 789.0
+offset_top = 222.0
+offset_right = 879.0
+offset_bottom = 253.0
 size_flags_horizontal = 3
-text = "Lose"
+text = "Orange"
 
 [node name="BombTimer" type="Timer" parent="."]
 wait_time = 10.0
@@ -116,13 +121,19 @@ offset_bottom = 32.0
 grow_horizontal = 2
 
 [node name="LoseButton4" type="Button" parent="."]
+z_index = 1
 layout_mode = 0
-offset_left = 549.0
-offset_top = 245.0
-offset_right = 617.0
-offset_bottom = 276.0
+offset_left = 440.0
+offset_top = 123.0
+offset_right = 508.0
+offset_bottom = 154.0
 size_flags_horizontal = 3
-text = "Lose"
+text = "Yellow"
+
+[node name="BombD" type="Sprite2D" parent="."]
+position = Vector2(562, 323.5)
+scale = Vector2(10, 10.1094)
+texture = ExtResource("5_tvl8y")
 
 [connection signal="pressed" from="TutorialButton" to="." method="_on_tutorial_button_pressed"]
 [connection signal="color_changed" from="ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]

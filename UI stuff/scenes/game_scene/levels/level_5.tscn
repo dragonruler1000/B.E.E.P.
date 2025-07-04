@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=3 uid="uid://btta362q0hoav"]
+
+[ext_resource type="Script" uid="uid://q0w300oxlylb" path="res://UI stuff/scenes/game_scene/levels/level.gd" id="1_r3gxy"]
+[ext_resource type="Script" uid="uid://mlxrwrfaeqjc" path="res://UI stuff/scenes/game_scene/tutorial_manager.gd" id="2_5aw35"]
+[ext_resource type="PackedScene" uid="uid://birl1quj74b6t" path="res://UI stuff/scenes/game_scene/tutorials/tutorial_3.tscn" id="3_gmvao"]
+[ext_resource type="Script" uid="uid://bd1ons4o2m55p" path="res://UI stuff/scenes/game_scene/input_display_label.gd" id="4_bpqft"]
+[ext_resource type="Texture2D" uid="uid://76416m8moaii" path="res://assets/art/bomb-a.png" id="5_r3gxy"]
+
+[node name="Level5" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r3gxy")
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TutorialManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_5aw35")
+tutorial_scenes = Array[PackedScene]([ExtResource("3_gmvao")])
+
+[node name="TutorialButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 603.0
+offset_right = 122.0
+offset_bottom = 634.0
+text = "Tutorial"
+
+[node name="InputDisplayLabel" type="Label" parent="."]
+layout_mode = 0
+size_flags_horizontal = 3
+horizontal_alignment = 1
+script = ExtResource("4_bpqft")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 833.0
+offset_top = 612.0
+offset_right = 989.0
+offset_bottom = 635.0
+text = "Change Level Color: "
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1002.0
+offset_top = 604.0
+offset_right = 1138.0
+offset_bottom = 635.0
+text = "Change Color"
+
+[node name="WinButton" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 347.0
+offset_top = 188.0
+offset_right = 409.0
+offset_bottom = 219.0
+size_flags_horizontal = 3
+text = "Win"
+
+[node name="LoseButton" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 690.0
+offset_top = 157.0
+offset_right = 758.0
+offset_bottom = 188.0
+size_flags_horizontal = 3
+text = "Lose"
+
+[node name="BombTimer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 27.0
+show_percentage = false
+
+[node name="TimeLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -41.5
+offset_right = 41.5
+offset_bottom = 32.0
+grow_horizontal = 2
+
+[node name="Bomb-a" type="Sprite2D" parent="."]
+position = Vector2(653, 402)
+texture = ExtResource("5_r3gxy")
+
+[connection signal="pressed" from="TutorialButton" to="." method="_on_tutorial_button_pressed"]
+[connection signal="color_changed" from="ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]
+[connection signal="pressed" from="WinButton" to="." method="_on_win_button_pressed"]
+[connection signal="pressed" from="LoseButton" to="." method="_on_lose_button_pressed"]

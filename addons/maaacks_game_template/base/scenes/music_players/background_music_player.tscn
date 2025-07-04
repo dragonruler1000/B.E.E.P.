@@ -1,8 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkcsjsk2ciff"]
-
-[ext_resource type="AudioStream" uid="uid://b4r00protidmt" path="res://assets/music/T-10.mp3" id="1_3ryhf"]
+[gd_scene format=3 uid="uid://bkcsjsk2ciff"]
 
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer"]
 process_mode = 3
-stream = ExtResource("1_3ryhf")
 autoplay = true
+bus = &"Music"
