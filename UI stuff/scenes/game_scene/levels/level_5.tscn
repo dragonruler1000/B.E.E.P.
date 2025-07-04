@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://q0w300oxlylb" path="res://UI stuff/scenes/game_scene/levels/level.gd" id="1_r3gxy"]
 [ext_resource type="Script" uid="uid://mlxrwrfaeqjc" path="res://UI stuff/scenes/game_scene/tutorial_manager.gd" id="2_5aw35"]
-[ext_resource type="PackedScene" uid="uid://birl1quj74b6t" path="res://UI stuff/scenes/game_scene/tutorials/tutorial_3.tscn" id="3_gmvao"]
+[ext_resource type="PackedScene" uid="uid://dw84r6tl05m41" path="res://UI stuff/scenes/game_scene/tutorials/tutorial_4.tscn" id="3_0i56u"]
 [ext_resource type="Script" uid="uid://bd1ons4o2m55p" path="res://UI stuff/scenes/game_scene/input_display_label.gd" id="4_bpqft"]
-[ext_resource type="Texture2D" uid="uid://76416m8moaii" path="res://assets/art/bomb-a.png" id="5_r3gxy"]
+[ext_resource type="Script" uid="uid://dk5u1y2wq1ncd" path="res://UI stuff/scenes/game_scene/levels/numpad.gd" id="5_r3gxy"]
 
 [node name="Level5" type="Control"]
 layout_mode = 3
@@ -28,7 +28,7 @@ color = Color(0, 0, 0, 1)
 [node name="TutorialManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_5aw35")
-tutorial_scenes = Array[PackedScene]([ExtResource("3_gmvao")])
+tutorial_scenes = Array[PackedScene]([ExtResource("3_0i56u")])
 
 [node name="TutorialButton" type="Button" parent="."]
 layout_mode = 0
@@ -64,20 +64,20 @@ text = "Change Color"
 [node name="WinButton" type="Button" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 347.0
-offset_top = 188.0
-offset_right = 409.0
-offset_bottom = 219.0
+offset_left = 1081.0
+offset_top = 222.0
+offset_right = 1143.0
+offset_bottom = 253.0
 size_flags_horizontal = 3
 text = "Win"
 
 [node name="LoseButton" type="Button" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 690.0
-offset_top = 157.0
-offset_right = 758.0
-offset_bottom = 188.0
+offset_left = 1078.0
+offset_top = 146.0
+offset_right = 1146.0
+offset_bottom = 177.0
 size_flags_horizontal = 3
 text = "Lose"
 
@@ -100,9 +100,70 @@ offset_right = 41.5
 offset_bottom = 32.0
 grow_horizontal = 2
 
-[node name="Bomb-a" type="Sprite2D" parent="."]
-position = Vector2(653, 402)
-texture = ExtResource("5_r3gxy")
+[node name="Numpad" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 302.0
+offset_top = 254.0
+offset_right = 535.0
+offset_bottom = 390.0
+script = ExtResource("5_r3gxy")
+
+[node name="GridContainer" type="GridContainer" parent="Numpad"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 228.0
+offset_bottom = 134.0
+columns = 3
+metadata/_edit_group_ = true
+
+[node name="Button1" type="Button" parent="Numpad/GridContainer"]
+layout_mode = 2
+text = "1"
+
+[node name="Button2" type="Button" parent="Numpad/GridContainer"]
+layout_mode = 2
+text = "2"
+
+[node name="Button3" type="Button" parent="Numpad/GridContainer"]
+layout_mode = 2
+text = "3"
+
+[node name="Button4" type="Button" parent="Numpad/GridContainer"]
+layout_mode = 2
+text = "4"
+
+[node name="Button5" type="Button" parent="Numpad/GridContainer"]
+layout_mode = 2
+text = "5"
+
+[node name="Button6" type="Button" parent="Numpad/GridContainer"]
+layout_mode = 2
+text = "6"
+
+[node name="Button7" type="Button" parent="Numpad/GridContainer"]
+layout_mode = 2
+text = "7"
+
+[node name="Button8" type="Button" parent="Numpad/GridContainer"]
+layout_mode = 2
+text = "8"
+
+[node name="Button9" type="Button" parent="Numpad/GridContainer"]
+layout_mode = 2
+text = "9"
+
+[node name="ButtonClear" type="Button" parent="Numpad/GridContainer"]
+layout_mode = 2
+text = "Clear"
+
+[node name="Button0" type="Button" parent="Numpad/GridContainer"]
+layout_mode = 2
+text = "    0    "
+
+[node name="ButtonEnter" type="Button" parent="Numpad/GridContainer"]
+layout_mode = 2
+text = "Enter"
 
 [connection signal="pressed" from="TutorialButton" to="." method="_on_tutorial_button_pressed"]
 [connection signal="color_changed" from="ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]
