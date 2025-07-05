@@ -2,17 +2,23 @@
 ## Collaborators
 
 ### Role
-Zachariah Jackson - Developer
-Person 2  
-[Person w/ Link]()  
+[Zachariah Jackson](https://directory.minecraftchest2.us/) - Developer
 
 ## Sourced
 ### Music
 #### In-Game Soundtrack
-**Track:** T-10  
-**Author:** Zachariah Jackson  
-**Source:** [flat.io : T-10](https://flat.io/score/64590ea0608144731443c34c-t-10)  
-**License:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+Track: T-10  
+Author: Zachariah Jackson  
+Source: [flat.io : T-10](https://flat.io/score/64590ea0608144731443c34c-t-10)  
+License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+
+### Art
+#### Level Backgrounds
+levels 1 - 4
+Artist: [Zachariah Jackson](https://directory.minecraftchest2.us/)
+Made in pixeloroma
+License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+
 
 
 #### Godot Engine Logo
