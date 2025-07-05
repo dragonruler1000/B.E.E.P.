@@ -6,11 +6,22 @@ signal level_lost
 @onready var timer: Timer = $BombTimer
 @onready var time_label: Label = $TimeLabel
 var max_time := 10.0  # in seconds
+@onready var array: Array[Variant] = [preload("res://assets/SFX/explosion-42132.mp3"),
+									 preload("res://assets/SFX/explosion-91004.mp3"),
+									 preload("res://assets/SFX/explosion-fx-343683.mp3")]
+@onready var audio := AudioStreamPlayer2D.new():
+	set(val):
+		audio = val
+		self.add_child(val)
 
 var level_state : LevelState
 
 func _on_lose_button_pressed() -> void:
 	level_lost.emit()
+	audio.play(0.0)
+	audio.stream = array.pick_random()
+	print(self)
+	
 
 func _on_win_button_pressed() -> void:
 	level_won.emit()

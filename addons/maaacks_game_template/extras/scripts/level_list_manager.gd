@@ -26,6 +26,7 @@ extends Node
 @export_group("Debugging")
 @export var force_level : int = -1
 
+
 ## Reference to the current level node.
 var current_level
 var current_level_id : int :
@@ -58,7 +59,8 @@ func _load_ending() -> void:
 		SceneLoader.load_scene(ending_scene)
 	else:
 		_load_main_menu()
-
+#func array.pick_random() -> AudioStream:
+##	 Returns a random audio stream from the array.
 func _on_level_lost() -> void:
 	if level_lost_scene:
 		var instance = level_lost_scene.instantiate()
