@@ -18,7 +18,7 @@ In B.E.E.P. (Bomb Emergency Extraction Protocol), each level throws you into a h
 No second chances. No hand-holding. Just you, the bomb, and a ticking clock.
 
 Can you keep your cool long enough to survive the protocol? "
-config/version="1.0.0"
+config/version="1.1.0"
 run/main_scene="res://UI stuff/scenes/opening/opening_with_logo.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://bq4wgict8wodo"
