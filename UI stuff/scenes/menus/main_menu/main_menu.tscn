@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl5u2lpxmop63"]
+[gd_scene load_steps=6 format=3 uid="uid://cl5u2lpxmop63"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_ixxyw"]
 [ext_resource type="Script" uid="uid://o0g2pnqxjdhv" path="res://UI stuff/scenes/menus/main_menu/main_menu.gd" id="2_ojbel"]
 [ext_resource type="PackedScene" uid="uid://csptb8p3erh26" path="res://UI stuff/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_8j5rb"]
 [ext_resource type="PackedScene" uid="uid://brdt0t5gvhypm" path="res://UI stuff/scenes/credits/scrollable_credits.tscn" id="4_mupya"]
+[ext_resource type="Texture2D" uid="uid://bs422h6pco853" path="res://assets/art/ChatGPT Image Jul 5, 2025, 12_28_57 PM.png" id="5_ojbel"]
 
 [node name="MainMenu" instance=ExtResource("1_ixxyw")]
 script = ExtResource("2_ojbel")
@@ -19,3 +20,9 @@ text = "b.e.e.p"
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0"]
 text = "(Bomb Emergency Extraction Protocol)"
+
+[node name="ChatGptImageJul5,2025,122857Pm" type="Sprite2D" parent="MenuContainer" index="3"]
+z_index = -1
+position = Vector2(575.5, 322.5)
+scale = Vector2(0.749349, 0.629883)
+texture = ExtResource("5_ojbel")

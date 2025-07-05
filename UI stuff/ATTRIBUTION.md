@@ -14,10 +14,17 @@ License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ### Art
 #### Level Backgrounds
-levels 1 - 4
+##### Levels 1 - 4
 Artist: [Zachariah Jackson](https://directory.minecraftchest2.us/)
 Made in pixeloroma
 License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+##### Game Icon
+Artist Zachariah Jackson
+made in pixeloroma with a base of the godot engine logo
+License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+##### Main menu background
+artist: ChatGPT
+made using GPT-4o image generation
 
 
 
